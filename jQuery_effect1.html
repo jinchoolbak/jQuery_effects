@@ -45,7 +45,35 @@
     
     <script>
         $(() => {
-            
+             //slideUp
+            $(".btn1").on("click", (() => {
+                $(".box").slideUp(1000,"linear", (() => {
+                    $(".btn1").hide();
+                    $(".btn2").show();
+                }));
+            }));
+
+             //fadeIn
+            $(".btn2").on("click", (() => {
+                $(".box").fadeIn(1000,"linear", (() => {
+                    $(".btn1").show();
+                    $(".btn2").hide();
+                }));
+            }));
+
+            //slideToggle
+            $(".btn3").on("click", (() => {
+                $(".box").slideToggle(1000,"linear");
+            }));
+
+            //fadeTo(0.3)
+            $(".btn4").on("click", (() => {
+                $(".box").fadeTo("fast", 0.3);
+            }));
+            //fadeTo(1)
+            $(".btn5").on("click", (() => {
+                $(".box").fadeTo("slow", 1);
+            }));
         })
     </script>
 </body>
