@@ -16,14 +16,23 @@
     <button class="btn2">50px 이동</button>
     
     <script>
+        // console.log($(window).innerWidth()); //모니터 너비를 콘솔에 띄워줘.
         $(() => {
             //500px 이동
             $(".btn1").on("click", (() => {
-                $(".pic img").animate({
-                    "margin-left": "500px",
-                },"slow","swing", (() => {
-                    alert("500px 이동완료!")
-                }));
+                //만약 모니터 너비를 넘어가면 마진레프트를 0으로 만들어줘.그게 아니면 500px씩
+                //움직이게 해줘.
+                if (
+                    parseInt($(".pic img").css("marginLeft")) > $(window).innerWidth()
+                ) {
+                    $(".pic img").css("marginLeft", 0);
+                } else {
+                    $(".pic img").animate({
+                        "margin-left": "+=500px",
+                    },"slow","swing", (() => {
+                        alert("500px 이동완료!")
+                    }));
+                };
             }));
 
             //50px 이동
