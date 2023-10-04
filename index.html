@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuert effects</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <h1>효과 및 애니메이션 메소드 실습</h1>
+    <div id="box">
+        안녕하세요,한울직업전문학원에 오신 걸 환영합니다!
+    </div>
+    <script>
+        $("#box").hide(2000, "swing", function() {
+            alert("hello!");
+        })
+    </script>
+    
+</body>
+</html>
